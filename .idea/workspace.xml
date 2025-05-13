@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da3814e8-7f76-4a9b-958d-6df51bf448af" name="Changes" comment="part1: added unit tests for TodoService and corrected storage cleanup errors">
+    <list default="true" id="da3814e8-7f76-4a9b-958d-6df51bf448af" name="Changes" comment="refactor: introduce hexagonal architecture with ITodoRepository port&#10;&#10;- Created ITodoRepository interface in application layer&#10;- Adapted TodoInMemoryRepository to implement the port&#10;- Updated TodoService and TodoController to depend on the interface">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/application/ITodoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/presentation/TodoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/application/TodoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/TodoStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/persistence/TodoStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/application/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/application/TodoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/persistence/TodoStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/persistence/inmemory/TodoInMemoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/presentation/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/presentation/TodoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/TodoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/TodoServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,11 +81,24 @@
   }
 }]]></component>
   <component name="RunManager" selected="JUnit.TodoServiceTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.Main" />
+      <module name="TP2-GL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TodoServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP2-GL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.persistence.*" />
+          <option name="PATTERN" value="org.persistence.inmemory.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,7 +113,7 @@
       <module name="TP2-GL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.persistence.*" />
+          <option name="PATTERN" value="org.persistence.inmemory.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,7 +129,7 @@
       <module name="TP2-GL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.persistence.*" />
+          <option name="PATTERN" value="org.persistence.inmemory.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -131,7 +145,7 @@
       <module name="TP2-GL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.persistence.*" />
+          <option name="PATTERN" value="org.persistence.inmemory.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,29 +157,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TodoServiceTest.testCreateTodoWithValidData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TP2-GL" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.persistence.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org" />
-      <option name="MAIN_CLASS_NAME" value="org.TodoServiceTest" />
-      <option name="METHOD_NAME" value="testCreateTodoWithValidData" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TodoServiceTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TodoServiceTest.testCreateTodoWithEmptyDate" />
         <item itemvalue="JUnit.TodoServiceTest.testCreateTodoWithInvalidDate" />
         <item itemvalue="JUnit.TodoServiceTest.testCreateTodoWithDuplicateName" />
-        <item itemvalue="JUnit.TodoServiceTest.testCreateTodoWithValidData" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +185,7 @@
       <updated>1746607380587</updated>
       <workItem from="1746607381580" duration="1415000" />
       <workItem from="1746610012816" duration="969000" />
-      <workItem from="1747168473128" duration="1035000" />
+      <workItem from="1747168473128" duration="1690000" />
     </task>
     <task id="LOCAL-00001" summary="part1">
       <option name="closed" value="true" />
@@ -221,7 +219,23 @@
       <option name="project" value="LOCAL" />
       <updated>1747169453596</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="refactor: reorganize project into 3-tier architecture">
+      <option name="closed" value="true" />
+      <created>1747169620346</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747169620346</updated>
+    </task>
+    <task id="LOCAL-00006" summary="refactor: reorganize project into 3-tier architecture">
+      <option name="closed" value="true" />
+      <created>1747169651683</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747169651683</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +244,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="part1" />
     <MESSAGE value="part1: added unit tests for TodoService and corrected storage cleanup errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="part1: added unit tests for TodoService and corrected storage cleanup errors" />
+    <MESSAGE value="refactor: reorganize project into 3-tier architecture" />
+    <MESSAGE value="refactor: introduce hexagonal architecture with ITodoRepository port&#10;&#10;- Created ITodoRepository interface in application layer&#10;- Adapted TodoInMemoryRepository to implement the port&#10;- Updated TodoService and TodoController to depend on the interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: introduce hexagonal architecture with ITodoRepository port&#10;&#10;- Created ITodoRepository interface in application layer&#10;- Adapted TodoInMemoryRepository to implement the port&#10;- Updated TodoService and TodoController to depend on the interface" />
   </component>
 </project>

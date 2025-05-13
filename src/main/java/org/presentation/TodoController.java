@@ -1,30 +1,29 @@
 package org.presentation;
 
-import org.Todo;
+import org.application.ITodoRepository;
 import org.application.TodoService;
-import org.persistence.TodoStorage;
-
-import java.util.List;
+import org.Todo;
 
 public class TodoController {
 
+    private final TodoService service;
+
+    public TodoController(ITodoRepository repository) {
+        this.service = new TodoService(repository);
+    }
+
     public void handleCreateTodo(String name, String dueDateStr) {
         try {
-            String result = TodoService.createTodo(name, dueDateStr);
-            if (result.startsWith("Created")) {
-                System.out.println("✅ [201 CREATED] " + result);
-            } else {
-                System.out.println("❌ [400 BAD REQUEST] " + result);
-            }
+            String result = service.createTodo(name, dueDateStr);
+            System.out.println(result.startsWith("Created") ? "✅ [201 CREATED] " + result
+                    : "❌ [400 BAD REQUEST] " + result);
         } catch (IllegalArgumentException e) {
             System.out.println("❌ [400 BAD REQUEST] " + e.getMessage());
         }
     }
 
     public void handleListTodos() {
-        List<Todo> todos = TodoStorage.getAllTodos();
-        System.out.println("📋 [200 OK] Listing all Todos:");
-        for (Todo t : todos) {
+        for (Todo t : service.getAllTodos()) {
             System.out.println("- " + t.getName() + (t.getDueDate() != null ? " (Due: " + t.getDueDate() + ")" : ""));
         }
     }

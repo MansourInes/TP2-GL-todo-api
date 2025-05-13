@@ -1,54 +1,59 @@
 package org;
 
 import org.application.TodoService;
-import org.persistence.TodoStorage;
+import org.persistence.inmemory.TodoInMemoryRepository;
+import org.Todo;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 import java.util.List;
 
+import static org.junit.Assert.*;
 
 public class TodoServiceTest {
 
+    private TodoService service;
+    private TodoInMemoryRepository repository;
+
     @Before
-    public void clearTodos() {
-        TodoStorage.clear();
+    public void setUp() {
+        repository = new TodoInMemoryRepository();
+        service = new TodoService(repository);
     }
 
     @Test
     public void testValidName() {
-        assertTrue(TodoService.isValidName("Buy milk"));
-        assertFalse(TodoService.isValidName(null));
-        assertFalse(TodoService.isValidName("   "));
-        assertFalse(TodoService.isValidName(new String(new char[64]).replace("\0", "a")));
+        assertTrue(service.isValidName("Buy milk"));
+        assertFalse(service.isValidName(null));
+        assertFalse(service.isValidName("   "));
+        assertFalse(service.isValidName(new String(new char[64]).replace("\0", "a")));
     }
 
     @Test
     public void testCreateTodoWithValidData() {
-        String response = TodoService.createTodo("Task 1", "2025-06-01");
+        String response = service.createTodo("Task 1", "2025-06-01");
         assertEquals("Created successfully.", response);
 
-        List<Todo> todos = TodoStorage.getAllTodos();
+        List<Todo> todos = repository.getAllTodos();
         assertEquals(1, todos.size());
         assertEquals("Task 1", todos.get(0).getName());
     }
 
     @Test
     public void testCreateTodoWithDuplicateName() {
-        TodoService.createTodo("Unique Task", null);
-        String response = TodoService.createTodo("Unique Task", null);
+        service.createTodo("Unique Task", null);
+        String response = service.createTodo("Unique Task", null);
         assertEquals("Invalid: Name must be unique.", response);
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testCreateTodoWithInvalidDate() {
-        TodoService.createTodo("Task", "not-a-date");
+        service.createTodo("Task", "not-a-date");
     }
 
     @Test
     public void testCreateTodoWithEmptyDate() {
-        String response = TodoService.createTodo("No Due Date", "");
+        String response = service.createTodo("No Due Date", "");
         assertEquals("Created successfully.", response);
     }
 }
