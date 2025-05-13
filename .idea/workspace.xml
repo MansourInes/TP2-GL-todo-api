@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da3814e8-7f76-4a9b-958d-6df51bf448af" name="Changes" comment="refactor: introduce hexagonal architecture with ITodoRepository port&#10;&#10;- Created ITodoRepository interface in application layer&#10;- Adapted TodoInMemoryRepository to implement the port&#10;- Updated TodoService and TodoController to depend on the interface">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/application/ITodoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/persistence/csvfile/TodoCsvFileRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/application/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/application/TodoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/persistence/TodoStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/persistence/inmemory/TodoInMemoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/presentation/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/presentation/TodoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/TodoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/TodoServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +95,7 @@
       <module name="TP2-GL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.persistence.inmemory.*" />
+          <option name="PATTERN" value="org.persistence.csvfile.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,7 +110,7 @@
       <module name="TP2-GL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.persistence.inmemory.*" />
+          <option name="PATTERN" value="org.persistence.csvfile.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,7 +126,7 @@
       <module name="TP2-GL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.persistence.inmemory.*" />
+          <option name="PATTERN" value="org.persistence.csvfile.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,7 +142,7 @@
       <module name="TP2-GL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.persistence.inmemory.*" />
+          <option name="PATTERN" value="org.persistence.csvfile.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -185,7 +182,7 @@
       <updated>1746607380587</updated>
       <workItem from="1746607381580" duration="1415000" />
       <workItem from="1746610012816" duration="969000" />
-      <workItem from="1747168473128" duration="1690000" />
+      <workItem from="1747168473128" duration="3867000" />
     </task>
     <task id="LOCAL-00001" summary="part1">
       <option name="closed" value="true" />
@@ -235,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747169651683</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="refactor: introduce hexagonal architecture with ITodoRepository port&#10;&#10;- Created ITodoRepository interface in application layer&#10;- Adapted TodoInMemoryRepository to implement the port&#10;- Updated TodoService and TodoController to depend on the interface">
+      <option name="closed" value="true" />
+      <created>1747170307832</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747170307833</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
