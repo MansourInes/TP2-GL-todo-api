@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da3814e8-7f76-4a9b-958d-6df51bf448af" name="Changes" comment="part1">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/TodoServiceTest.java" afterDir="false" />
+    <list default="true" id="da3814e8-7f76-4a9b-958d-6df51bf448af" name="Changes" comment="part1: added unit tests for TodoService and corrected storage cleanup errors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/TodoStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/TodoStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/presentation/TodoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/application/TodoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/TodoStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/persistence/TodoStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/TodoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/TodoServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +53,10 @@
     "Application.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.TodoServiceTest.executor": "Run",
+    "JUnit.TodoServiceTest.testCreateTodoWithDuplicateName.executor": "Run",
+    "JUnit.TodoServiceTest.testCreateTodoWithEmptyDate.executor": "Run",
+    "JUnit.TodoServiceTest.testCreateTodoWithInvalidDate.executor": "Run",
+    "JUnit.TodoServiceTest.testCreateTodoWithValidData.executor": "Run",
     "JUnit.TodoServiceTest.testValidName.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "Repository.Attach.Annotations": "false",
@@ -79,7 +84,7 @@
       <module name="TP2-GL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.*" />
+          <option name="PATTERN" value="org.persistence.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,7 +99,7 @@
       <module name="TP2-GL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.*" />
+          <option name="PATTERN" value="org.persistence.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,7 +115,7 @@
       <module name="TP2-GL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.*" />
+          <option name="PATTERN" value="org.persistence.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,7 +131,7 @@
       <module name="TP2-GL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.*" />
+          <option name="PATTERN" value="org.persistence.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,7 +147,7 @@
       <module name="TP2-GL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.*" />
+          <option name="PATTERN" value="org.persistence.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -182,7 +187,7 @@
       <updated>1746607380587</updated>
       <workItem from="1746607381580" duration="1415000" />
       <workItem from="1746610012816" duration="969000" />
-      <workItem from="1747168473128" duration="733000" />
+      <workItem from="1747168473128" duration="1035000" />
     </task>
     <task id="LOCAL-00001" summary="part1">
       <option name="closed" value="true" />
@@ -208,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747168549408</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="part1: added unit tests for TodoService and corrected storage cleanup errors">
+      <option name="closed" value="true" />
+      <created>1747169453596</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747169453596</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +229,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="part1" />
-    <option name="LAST_COMMIT_MESSAGE" value="part1" />
+    <MESSAGE value="part1: added unit tests for TodoService and corrected storage cleanup errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="part1: added unit tests for TodoService and corrected storage cleanup errors" />
   </component>
 </project>

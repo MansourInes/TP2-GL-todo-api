@@ -1,4 +1,8 @@
-package org;
+package org.presentation;
+
+import org.Todo;
+import org.application.TodoService;
+import org.persistence.TodoStorage;
 
 import java.util.List;
 

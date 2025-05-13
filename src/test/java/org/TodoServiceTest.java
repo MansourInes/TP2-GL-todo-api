@@ -1,8 +1,7 @@
 package org;
 
-import org.Todo;
-import org.TodoService;
-import org.TodoStorage;
+import org.application.TodoService;
+import org.persistence.TodoStorage;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
