@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da3814e8-7f76-4a9b-958d-6df51bf448af" name="Changes" comment="part1" />
+    <list default="true" id="da3814e8-7f76-4a9b-958d-6df51bf448af" name="Changes" comment="part1">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/TodoServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/TodoStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/TodoStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/AppTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MansourInes"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MansourInes/TP2-GL-todo-api.git",
+    "accountId": "142a5ae8-725a-43f6-8dbd-315e6cd3f47d"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -32,7 +50,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.TodoServiceTest.executor": "Run",
+    "JUnit.TodoServiceTest.testValidName.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -50,9 +74,8 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.Main" />
+  <component name="RunManager" selected="JUnit.TodoServiceTest">
+    <configuration name="TodoServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP2-GL" />
       <extension name="coverage">
         <pattern>
@@ -60,13 +83,84 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org" />
+      <option name="MAIN_CLASS_NAME" value="org.TodoServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoServiceTest.testCreateTodoWithDuplicateName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP2-GL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org" />
+      <option name="MAIN_CLASS_NAME" value="org.TodoServiceTest" />
+      <option name="METHOD_NAME" value="testCreateTodoWithDuplicateName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoServiceTest.testCreateTodoWithEmptyDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP2-GL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org" />
+      <option name="MAIN_CLASS_NAME" value="org.TodoServiceTest" />
+      <option name="METHOD_NAME" value="testCreateTodoWithEmptyDate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoServiceTest.testCreateTodoWithInvalidDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP2-GL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org" />
+      <option name="MAIN_CLASS_NAME" value="org.TodoServiceTest" />
+      <option name="METHOD_NAME" value="testCreateTodoWithInvalidDate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoServiceTest.testCreateTodoWithValidData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP2-GL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org" />
+      <option name="MAIN_CLASS_NAME" value="org.TodoServiceTest" />
+      <option name="METHOD_NAME" value="testCreateTodoWithValidData" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TodoServiceTest" />
+        <item itemvalue="JUnit.TodoServiceTest.testCreateTodoWithEmptyDate" />
+        <item itemvalue="JUnit.TodoServiceTest.testCreateTodoWithInvalidDate" />
+        <item itemvalue="JUnit.TodoServiceTest.testCreateTodoWithDuplicateName" />
+        <item itemvalue="JUnit.TodoServiceTest.testCreateTodoWithValidData" />
       </list>
     </recent_temporary>
   </component>
@@ -88,6 +182,7 @@
       <updated>1746607380587</updated>
       <workItem from="1746607381580" duration="1415000" />
       <workItem from="1746610012816" duration="969000" />
+      <workItem from="1747168473128" duration="733000" />
     </task>
     <task id="LOCAL-00001" summary="part1">
       <option name="closed" value="true" />
@@ -105,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746610339722</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="part1">
+      <option name="closed" value="true" />
+      <created>1747168549408</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1747168549408</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

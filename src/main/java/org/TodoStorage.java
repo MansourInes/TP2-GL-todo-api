@@ -20,4 +20,9 @@ public class TodoStorage {
     public static boolean isDuplicate(String name) {
         return todos.stream().anyMatch(t -> t.getName().equalsIgnoreCase(name));
     }
+
+    // for tests
+    public static void clear() {
+        todos.clear();
+    }
 }
