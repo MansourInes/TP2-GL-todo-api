@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da3814e8-7f76-4a9b-958d-6df51bf448af" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Todo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/TodoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/TodoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/TodoStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="da3814e8-7f76-4a9b-958d-6df51bf448af" name="Changes" comment="part1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +36,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "<unknown>",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -100,11 +87,32 @@
       <option name="presentableId" value="Default" />
       <updated>1746607380587</updated>
       <workItem from="1746607381580" duration="1415000" />
-      <workItem from="1746610012816" duration="134000" />
+      <workItem from="1746610012816" duration="969000" />
     </task>
+    <task id="LOCAL-00001" summary="part1">
+      <option name="closed" value="true" />
+      <created>1746610293183</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746610293183</updated>
+    </task>
+    <task id="LOCAL-00002" summary="part1">
+      <option name="closed" value="true" />
+      <created>1746610339722</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746610339722</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="part1" />
+    <option name="LAST_COMMIT_MESSAGE" value="part1" />
   </component>
 </project>
